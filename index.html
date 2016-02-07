@@ -49,8 +49,8 @@
 									</p>
 								</div>
 								<div class="col l4 m12">
-									<feed url="https://github.com/NickMckloski.atom" 
-									template-url="partials/feedtemplate.html" count="12"></feed>
+									<feed id="git" url="https://github.com/NickMckloski.atom" 
+									template-url="partials/feedtemplate.html" count="12" post-render="feedPostRender"></feed>
 								</div>
 							</div>
 						</div>
@@ -76,6 +76,15 @@
 		<script type="text/javascript" src="js/app/controllers/feed.js"></script>
 
 		<script type="text/javascript">
+			
+			function feedPostRender() {
+				//append links in git feed
+				$('#git').find('a').each(function (idx, anchor) {
+					anchor.target = '_new';
+					anchor.href = anchor.href.replace(window.location.origin, 'http://github.com');
+				});
+			}
+			
 			//hide elements on load
 			$('main').hide();
 			//load bar and element fades
