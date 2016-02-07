@@ -68,7 +68,7 @@
 		<!-- AngularJS -->
 		<script type="text/javascript" src="https://code.angularjs.org/1.3.14/angular.min.js"></script>
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
-		<script type="text/javascript" src="http://siddii.github.io/angular-feeds/app/angular-feeds/angular-feeds.js"></script>
+		<script type="text/javascript" src="js/angular-feeds.js"></script>
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-messages.js"></script>
 		<!-- app scripts -->
 		<script type="text/javascript" src="js/app/app.js"></script>
@@ -81,7 +81,7 @@
 				//append links in git feed
 				$('#git').find('a').each(function (idx, anchor) {
 					anchor.target = '_new';
-					anchor.href = anchor.href.replace(window.location.origin, 'http://github.com');
+					anchor.href = anchor.href.replace(window.location.origin, 'https://github.com');
 				});
 			}
 			
