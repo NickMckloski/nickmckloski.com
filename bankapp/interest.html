@@ -1,0 +1,189 @@
+﻿<html ng-app="app">
+    <head>
+        <title>Bank App - Interest</title>
+        <meta charset="utf-8" />
+
+        <!--Bootstrap Css-->
+        <link rel="stylesheet" type="text/css" href="./Content/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./Content/style.css">
+        <!--Angular-Chartjs Css-->
+        <link rel="stylesheet" href="./Content/angular-chart.min.css">
+
+    </head>
+    <body ng-controller="Interest as controller">
+
+        <!--Header-->
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Mock Bank App</h1>
+                <!--Navlinks-->
+                <nav class="nav navheader">
+                    <a class="navlink" href="/bankapp/index.html">
+                        Account
+                    </a>
+                    <a class="navlink active" href="/bankapp/interest.html">
+                        Interest Calculators
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <!--Header End--> 
+
+        <!--Body-->
+        
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-md-12">
+
+                    <div class="col-md-6">
+                        <h2>Simple interest</h2>
+                        <form name="simpleInterestForm" class="form-horizontal" role="form" novalidate>
+
+                            <!--Starting input-->
+                            <div class="form-group" ng-class="{ 'has-error' : simpleInterestForm.starting.$invalid && simpleInterestForm.starting.$touched }">
+                                <label class="control-label col-sm-4 pull-left" for="name">Starting amount:</label>
+                                <div class="col-sm-6 pull-right">
+                                    <input type="number" name="starting" class="form-control" ng-model="controller.simpleStarting" required />
+                                    <p ng-cloak ng-if="simpleInterestForm.starting.$invalid && simpleInterestForm.starting.$touched" class="help-block">
+                                        Starting amount is required.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--Years input-->
+                            <div class="form-group" ng-class="{ 'has-error' : simpleInterestForm.years.$invalid && simpleInterestForm.years.$touched }">
+                                <label class="control-label col-sm-4 pull-left" for="name">Years:</label>
+                                <div class="col-sm-6 pull-right">
+                                    <input type="number" name="years" class="form-control" ng-model="controller.simpleYears" required />
+                                    <p ng-cloak ng-if="simpleInterestForm.years.$invalid && simpleInterestForm.years.$touched" class="help-block">
+                                        Number of years is required.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--Rate input-->
+                            <div class="form-group" ng-class="{ 'has-error' : simpleInterestForm.rate.$invalid && simpleInterestForm.rate.$touched }">
+                                <label class="control-label col-sm-4 pull-left" for="name">Interest rate:</label>
+                                <div class="col-sm-6 pull-right">
+                                    <input type="number" name="rate" class="form-control" ng-model="controller.simpleRate" required />
+                                    <p ng-cloak ng-if="simpleInterestForm.rate.$invalid && simpleInterestForm.rate.$touched" class="help-block">
+                                        Interest rate is required.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button type="submit" ng-disabled="simpleInterestForm.$invalid" ng-click="controller.showSimpleOutput()" class="btn btn-default pull-left">
+                                Calculate simple interest
+                            </button>
+
+                            <p ng-cloak ng-if="controller.simpleOuput" class="pull-right" style="padding: 10px;">
+                                Future amount: ${{controller.calSimple()}}
+                            </p>
+
+                        </form>
+                    </div>
+                    
+
+                    <div class="col-md-6">
+                        <h2>Compounding interest</h2>
+
+                        <form name="compoundInterestForm" class="form-horizontal" role="form" novalidate>
+
+                            <!--Starting input-->
+                            <div class="form-group" ng-class="{ 'has-error' : compoundInterestForm.starting.$invalid && compoundInterestForm.starting.$touched }">
+                                <label class="control-label col-sm-4 pull-left" for="name">Starting amount:</label>
+                                <div class="col-sm-6 pull-right">
+                                    <input type="number" name="starting" class="form-control" ng-model="controller.compStarting" required />
+                                    <p ng-cloak ng-if="compoundInterestForm.starting.$invalid && compoundInterestForm.starting.$touched" class="help-block">
+                                        Starting amount is required.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--Addition input-->
+                            <div class="form-group" ng-class="{ 'has-error' : compoundInterestForm.addition.$invalid && compoundInterestForm.addition.$touched }">
+                                <label class="control-label col-sm-4 pull-left" for="name">Monthly addition:</label>
+                                <div class="col-sm-6 pull-right">
+                                    <input type="number" name="addition" class="form-control" ng-model="controller.compAddition" required />
+                                    <p ng-cloak ng-if="compoundInterestForm.addition.$invalid && compoundInterestForm.addition.$touched" class="help-block">Monthly addition is required.</p>
+                                </div>
+                            </div>
+
+                            <!--Time to compound input-->
+                            <div class="form-group" ng-class="{ 'has-error' : compoundInterestForm.times.$invalid && compoundInterestForm.times.$touched }">
+                                <label class="control-label col-sm-4 pull-left" for="name">Number of times to compound annually:</label>
+                                <div class="col-sm-6 pull-right">
+                                    <input type="number" name="times" class="form-control" ng-model="controller.compTimes" required />
+                                    <p ng-cloak ng-if="compoundInterestForm.times.$invalid && compoundInterestForm.times.$touched" class="help-block">
+                                        Number of times to compound is required.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--Years input-->
+                            <div class="form-group" ng-class="{ 'has-error' : compoundInterestForm.years.$invalid && compoundInterestForm.years.$touched }">
+                                <label class="control-label col-sm-4 pull-left" for="name">Years:</label>
+                                <div class="col-sm-6 pull-right">
+                                    <input type="number" name="years" class="form-control" ng-model="controller.compYears" required />
+                                    <p ng-cloak ng-if="compoundInterestForm.years.$invalid && compoundInterestForm.years.$touched" class="help-block">
+                                        Number of years is required.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--Rate input-->
+                            <div class="form-group" ng-class="{ 'has-error' : compoundInterestForm.rate.$invalid && compoundInterestForm.rate.$touched }">
+                                <label class="control-label col-sm-4 pull-left" for="name">Interest rate:</label>
+                                <div class="col-sm-6 pull-right">
+                                    <input type="number" name="rate" class="form-control" ng-model="controller.compRate" required />
+                                    <p ng-cloak ng-if="compoundInterestForm.rate.$invalid && compoundInterestForm.rate.$touched" class="help-block">
+                                        Interest rate is required.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button type="submit" ng-disabled="compoundInterestForm.$invalid" ng-click="controller.showCompOutput()" class="btn btn-default pull-left">
+                                Calculate compound interest
+                            </button>
+
+                            <p ng-cloak ng-if="controller.compOuput" class="pull-right" style="padding: 10px;">
+                                Future amount: ${{controller.calCompound()}}
+                            </p>
+
+                        </form>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+        </div>
+        <!--Body End-->
+
+        <!--Footer-->
+        <div class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <p class="navbar-text">
+                    <a href="http://nickmckloski.com/" target="_blank">Nick Mckloski</a> - 
+                    This demo was made using AngularJS, the Bootstrap framework. You can view the entire source
+                    <a href="https://github.com/NickMckloski/angularjs-bankapp" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+        <!--Footer End-->
+
+        <!--Bootstrap libraries-->
+        <script src="./Scripts/jquery/jquery-2.1.4.min.js"></script>
+        <script src="./Scripts/bootstrap/bootstrap.min.js"></script>
+        <!--Angular Dependencies-->
+        <script src="./Scripts/chartjs/Chart.min.js"></script><!--ChartJS is a dependency of Angular-Chartjs-->
+        <!--Angular libraries-->
+        <script src="./Scripts/angular/angular.min.js"></script>
+        <script src="./Scripts/angular/cookies/angular-cookies.min.js"></script>
+        <script src="./Scripts/angular/chart/angular-chart.min.js"></script>
+        <!--Angular app and controller-->
+        <script src="./app/app.module.js"></script>
+        <script src="./app/controllers/Interest.js"></script>
+
+    </body>
+</html>

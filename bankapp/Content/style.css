@@ -1,0 +1,68 @@
+﻿/*ng cloak is used to hide script while the page is loading*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+html, body {
+    height: 100%;
+    background-color: lightgrey;
+}
+
+body {
+    color: #333;
+}
+
+.Income {
+    color: green;
+}
+
+.Expense {
+    color: red;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        min-width: 1500px;
+    }
+}
+
+.jumbotron {
+    background-color: #ADADAD;
+}
+
+.navheader .navlink {
+    padding: .25rem 0;
+    font-weight: bold;
+    color: #333;
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+    text-decoration: none;
+}
+
+.navheader .navlink + .navlink {
+    margin-left: 1rem;
+}
+
+.navheader .navlink:hover {
+    color: white;
+}
+
+.navheader .active {
+    color: white;
+    border-bottom-color: white;
+}
+
+.pull-left {
+    text-align: left !important;
+}
+
+.no-data {
+    color: dimgray;
+    text-align: center;
+    padding: 10px;
+}
+
+.tab-pane {
+  border: 1px solid #ddd;
+  border-top: 0px;
+}

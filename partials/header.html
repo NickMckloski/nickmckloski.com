@@ -1,0 +1,39 @@
+<div class="parallax-container valign-wrapper">
+	<div class="parallax"><img src="img/bg.jpg"></div>
+	<div class="container logo-header">
+		<p class="valign flow-text">
+			<h1>Nick Mckloski</h1>
+			<h5 class="hide-on-small-only">Software and Web Developer</h5>
+		</p>
+	</div>
+</div>
+
+<nav ng-controller="navigation" class="blue darken-2 z-depth-2">
+	<div class="container nav-wrapper">
+		<!-- <a href="#" class="brand-logo">Nick Mckloski</a> -->
+		<a href="#" data-activates="collapse" class="button-collapse"><i class="material-icons">menu</i></a>
+		<ul id="nav-mobile" class="center hide-on-med-and-down">
+			<li ng-repeat="page in pages" ng-class="{active : name == page[0]}"><a href="{{page[1]}}">{{page[0]}}</a></li>
+		</ul>
+		<ul class="side-nav" id="collapse">
+			<li ng-repeat="page in pages" ng-class="{active : name == page[0]}"><a href="{{page[1]}}">{{page[0]}}</a></li>
+		</ul>
+	</div>
+</nav>
+
+<!--[if !IE]><!-->
+<div id="load" class="blue lighten-2 progress">
+	<div class="indeterminate"></div>
+</div>
+<!--<![endif]-->
+
+<script type="text/javascript">
+	//nav collapse button
+	$(".button-collapse").sideNav();
+	//load bar and element fades
+	$('#load').delay(500).fadeOut('slow');
+	//paralax
+	$(document).ready(function(){
+		$('.parallax').parallax();
+	});
+</script>

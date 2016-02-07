@@ -1,0 +1,56 @@
+<div ng-controller="navigation" class="blue darken-2 white-text page-footer">
+	<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col l9 s12">
+					<h5 class="white-text">Media Links</h5>
+					<p>
+						You can get in touch with me on social media below or use the "Contact" page.
+					</p>				
+					<p class="social-buttons">
+						<a class="waves-effect waves-dark white darken-3 btn black-text" href="https://github.com/NickMckloski" target="_blank">
+							<i class="material-icons left">code</i>Github
+						</a>
+						<a class="waves-effect waves-dark white darken-3 btn black-text" href="https://www.linkedin.com/in/nickmckloski" target="_blank">
+							<i class="material-icons left">link</i>LinkedIn
+						</a>
+						<a class="waves-effect waves-dark white darken-3 btn black-text" href="https://www.facebook.com/nick.mckloski" target="_blank">
+							<i class="material-icons left">mode_comment</i>Facebook
+						</a>
+					</p>
+				</div>
+				<div class="col l3 hide-on-small-only">
+					<h5 class="white-text right-align">Navigation</h5>
+					<ul class="right-align">
+						<li ng-repeat="page in pages">
+							<a class="white-text" href="{{page[1]}}">{{page[0]}}</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col l3 hide-on-med-and-up">
+					<h5 class="center-align white-text">Navigation</h5>
+					<ul class="center-align">
+						<li ng-repeat="page in pages">
+							<a class="white-text" href="{{page[1]}}">{{page[0]}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row blue darken-3">
+		<div class="container">
+			<p id="copyright" class="footer">
+				2016 Nicholas Mckloski
+			</p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	//hide elements on load
+	$('footer').hide();
+	//load bar and element fades
+	$('footer').delay(600).fadeIn('slow');
+</script>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<!--css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection">
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+
+		<!-- Google feeds -->
+		<script type="text/javascript" src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22feeds%22%2C%22version%22%3A%221.0%22%2C%22nocss%22%3Atrue%7D%5D%7D"></script>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+
+	<body ng-controller="projects">
+
+		<header ng-include src="'partials/header.html'" onload="name = 'Projects'">
+		</header>
+
+		<main>
+			<div class="col hide-on-med-and-down l3">
+				<div class="toc-wrapper pinned" style="padding-left: 15px;">
+					<ul class="section table-of-contents">
+						<li><a href="#apps" class="active">Applications/Software</a></li>
+						<div class="sub-items">
+							<li><a href="#traffic">Traffic Tools</a></li>
+							<li><a href="#gamestat">Game Statistics Tracker</a></li>
+							<li><a href="#rss">RSS Feed Reader</a></li>
+							<li><a href="#budget">Budget App</a></li>
+						</div>
+						<li><a href="#web">Web Development</a></li>
+						<div class="sub-items">
+							<li><a href="#bank">Bank App</a></li>
+							<li><a href="#personalweb">Personal Website</a></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="content z-depth-1">
+							<h3>Projects</h3>
+							<div class="row">								
+								<div class="col s12">
+
+									<!-- Apps -->
+									<h4 id="apps" class="section scrollspy">Applications/Software</h4>
+
+									<div class="divider"></div><br/>
+
+									<!-- traffic -->
+									<div id="traffic" class="section scrollspy z-depth-1">
+										<h5 class="blue darken-1 white-text">Traffic Analytic Tools</h5>
+										<div class="project-content">
+											<p>
+												<b>Description:</b>
+												An application made in coordination with a Civil Transportation Planner to streamline traffic calculations.
+												<br/>
+												<b>Technologies used:</b> <i>Java and JavaFX library.</i>
+											</p>
+											<div class="slider hoverable">
+												<ul class="slides">
+													<li ng-repeat="pic in trafficPics">
+														<img src="{{pic}}">
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- game stats -->
+									<div id="gamestat" class="section scrollspy z-depth-1">
+										<h5 class="blue darken-1 white-text">Game Statistics Tracker</h5>
+										<div class="project-content">
+											<p>
+												<b>Description:</b>
+												An application that tracked statistics in a video game. The information on game matches were pulled from the Riot Game's API and parsed in JSON.
+												<br/>
+												<b>Technologies used:</b> <i>Java and JSON for data storage.</i>
+											</p>
+											<div class="slider hoverable">
+												<ul class="slides">
+													<li ng-repeat="pic in gameStatPics">
+														<img src="{{pic}}">
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- rss feed -->
+									<div id="rss" class="section scrollspy z-depth-1">
+										<h5 class="blue darken-1 white-text">RSS Feed Reader</h5>
+										<div class="project-content">
+											<p>
+												<b>Description:</b>
+												An application that reads and display RSS feeds. Feeds added are then saved into an SQLite database and loaded on startup.
+												<br/>
+												<b>Technologies used:</b> <i>C#, .Net, and SQL for storage.</i>
+												<p class="social-buttons">
+													<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/RSSReader" target="_blank">
+														<i class="material-icons left">code</i>View GitHub
+													</a>
+												</p>
+											</p>
+											<div class="slider hoverable">
+												<ul class="slides">
+													<li ng-repeat="pic in rssPics">
+														<img src="{{pic}}">
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- budget -->
+									<div id="budget" class="section scrollspy z-depth-1">
+										<h5 class="blue darken-1 white-text">Budget App</h5>
+										<div class="project-content">
+											<p>
+												<b>Description:</b>
+												A small application for budget/expense management. Expenses can be added/removed/edited and then displayed in a pie chart. Items added then saved to an SQLite database and loaded on startup.
+												<br/>
+												<b>Technologies used:</b> <i>Java and SQL for the data storage.</i>
+												<p class="social-buttons">
+													<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/Budget-App" target="_blank">
+														<i class="material-icons left">code</i>View GitHub
+													</a>
+												</p>
+											</p>
+											<div class="slider hoverable">
+												<ul class="slides">
+													<li ng-repeat="pic in budgetPics">
+														<img src="{{pic}}">
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<!-- Web -->
+									<h4 id="web" class="section scrollspy">Web Development</h4>
+
+									<div class="divider"></div><br/>
+
+									<!-- bank app -->
+									<div id="bank" class="section scrollspy z-depth-1">
+										<h5 class="blue darken-1 white-text">AngularJS Bank App</h5>
+										<div class="project-content">
+											<p>
+												<b>Description:</b>
+												A mock bank account application made using AngularJS for the logic and the Razor engine for dynamic templating.
+												<br/>
+												<b>Technologies used:</b> <i>AngularJS, Razor, HTML, and CSS.</i>
+												<p class="social-buttons">
+													<a class="waves-effect waves-light blue darken-1 btn" href="/bankapp" target="_blank">
+														<i class="material-icons left">open_in_new</i>View it live
+													</a>
+													<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/angularjs-bankapp" target="_blank">
+														<i class="material-icons left">code</i>View GitHub
+													</a>
+												</p>
+											</p>
+											<div class="slider hoverable">
+												<ul class="slides">
+													<li ng-repeat="pic in bankPics">
+														<img src="{{pic}}">
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- personal web -->
+									<div id="personalweb" class="section scrollspy z-depth-1">
+										<h5 class="blue darken-1 white-text">Personal Website</h5>
+										<div class="project-content">
+											<p>
+												<b>Description:</b>
+												My personal website used to present my projects and resume(you're on it now!).
+												<br/>
+												<b>Technologies used:</b> <i>HTML, AngularJs, and the Materialize CSS framework.</i>
+											</p>
+											<div class="slider hoverable">
+												<ul class="slides">
+													<li ng-repeat="pic in personalWebPics">
+														<img src="{{pic}}">
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer ng-include src="'partials/footer.html'">
+		</footer>
+
+		<!-- Import jQuery before materialize.js -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<!-- AngularJS -->
+		<script type="text/javascript" src="https://code.angularjs.org/1.3.14/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
+		<script src="http://siddii.github.io/angular-feeds/app/angular-feeds/angular-feeds.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-messages.js"></script>
+		<!-- app scripts -->
+		<script type="text/javascript" src="js/app/app.js"></script>
+		<script type="text/javascript" src="js/app/controllers/projects.js"></script>
+		<script type="text/javascript" src="js/app/controllers/navigation.js"></script>
+
+		<script type="text/javascript">
+			//hide elements on load
+			$('main').hide();
+			//load bar and element fades
+			$('main').delay(600).fadeIn('slow');
+
+			$(document).ready(function(){
+				//image box
+    			$('.materialboxed').materialbox();
+				//sliders
+				$('.slider').slider();
+				//scrollspy
+				$('.scrollspy').scrollSpy();
+			});
+		</script>
+	</body>
+</html>
