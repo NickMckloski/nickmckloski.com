@@ -1,1 +1,3 @@
-#nickmckloski.com my website
+#nickmckloski.com
+my website
+live at http://nickmckloski.com
