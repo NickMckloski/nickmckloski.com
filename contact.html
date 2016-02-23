@@ -15,6 +15,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	</head>
 
+
+	<!--Contact form is not complete. I still have not decided on a server side tech to handle the email processing.-->
+
+
 	<body ng-controller="contact">
 
 		<header ng-include src="'partials/header.html'" onload="name = 'Contact'">
@@ -32,6 +36,12 @@
 									<p class="flow-text">
 										Fill out the form below with your information to email me. 
 									</p>
+
+									<div class="card-panel yellow lighten-2 z-depth-1">
+										<p>This form is currently under construction.<br/>
+											For now please email me at <a href="mailto:Mckloski.Nick@Gmail.com">Mckloski.Nick@Gmail.com</a>
+										</p>
+									</div>
 
 									<div ng-cloak ng-show="formProcessed && formSuccess">
 										<p class="success">Message sent successfully.</p>
