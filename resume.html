@@ -63,8 +63,10 @@
 		<script type="text/javascript">
 			//hide elements on load
 			$('main').hide();
-			//load bar and element fades
-			$('main').delay(600).fadeIn('slow');
+			$(document).ready(function() {
+				//elements fade in
+				$('main').delay(600).fadeIn('slow');
+			});
 		</script>
 	</body>
 </html>
