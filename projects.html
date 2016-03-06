@@ -6,6 +6,7 @@
 
 		<!--css-->
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection">
+    	<link type="text/css" rel="stylesheet" href="css/lightgallery.min.css" /> 
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 
 		<!-- Google feeds -->
@@ -54,7 +55,7 @@
 
 									<!-- traffic -->
 									<div id="traffic" class="section scrollspy z-depth-1">
-										<h5 class="blue darken-1 white-text">Traffic Analytic Tools</h5>
+										<h5 class="blue darken-1 white-text">Traffic Analytic Tools (Under Developement)</h5>
 										<div class="project-content">
 											<p>
 												<b>Description:</b>
@@ -62,12 +63,17 @@
 												<br/>
 												<b>Technologies used:</b> <i>Java and JavaFX library.</i>
 											</p>
-											<div class="slider hoverable">
+											<!-- <div class="slider hoverable">
 												<ul class="slides">
 													<li ng-repeat="pic in trafficPics">
 														<img src="{{pic}}">
 													</li>
 												</ul>
+											</div> -->
+											<div class="gallery center-align" id="lightgallery1">
+												<a ng-repeat="pic in trafficPics" href="{{pic}}">
+													<img class="hoverable z-depth-1 responsive-img" src="{{trafficThumbnails[$index]}}" />
+												</a>
 											</div>
 										</div>
 									</div>
@@ -79,14 +85,24 @@
 												<b>Description:</b>
 												An application that tracked statistics in a video game. The information on game matches were pulled from the Riot Game's API and parsed in JSON.
 												<br/>
-												<b>Technologies used:</b> <i>Java and JSON for data storage.</i>
+												<b>Technologies used:</b> <i>Java with JSON for data storage and a Swing UI.</i>
+												<p class="social-buttons">
+													<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/challenge-application" target="_blank">
+														<i class="material-icons left">code</i>View GitHub
+													</a>
+												</p>
 											</p>
-											<div class="slider hoverable">
+											<!-- <div class="slider hoverable">
 												<ul class="slides">
 													<li ng-repeat="pic in gameStatPics">
 														<img src="{{pic}}">
 													</li>
 												</ul>
+											</div> -->
+											<div class="gallery center-align" id="lightgallery2">
+												<a ng-repeat="pic in gameStatPics" href="{{pic}}">
+													<img class="hoverable z-depth-1 responsive-img" src="{{gameStatThumbnails[$index]}}" />
+												</a>
 											</div>
 										</div>
 									</div>
@@ -105,12 +121,17 @@
 													</a>
 												</p>
 											</p>
-											<div class="slider hoverable">
+											<!-- <div class="slider hoverable">
 												<ul class="slides">
 													<li ng-repeat="pic in rssPics">
 														<img src="{{pic}}">
 													</li>
 												</ul>
+											</div> -->
+											<div class="gallery center-align" id="lightgallery3">
+												<a ng-repeat="pic in rssPics" href="{{pic}}">
+													<img class="hoverable z-depth-1 responsive-img" src="{{rssThumbnails[$index]}}" />
+												</a>
 											</div>
 										</div>
 									</div>
@@ -122,19 +143,24 @@
 												<b>Description:</b>
 												A small application for budget/expense management. Expenses can be added/removed/edited and then displayed in a pie chart. Items added then saved to an SQLite database and loaded on startup.
 												<br/>
-												<b>Technologies used:</b> <i>Java and SQL for the data storage.</i>
+												<b>Technologies used:</b> <i>Java with the JavaFX library and SQL for the data storage.</i>
 												<p class="social-buttons">
 													<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/Budget-App" target="_blank">
 														<i class="material-icons left">code</i>View GitHub
 													</a>
 												</p>
 											</p>
-											<div class="slider hoverable">
+											<!-- <div class="slider hoverable">
 												<ul class="slides">
 													<li ng-repeat="pic in budgetPics">
 														<img src="{{pic}}">
 													</li>
 												</ul>
+											</div> -->
+											<div class="gallery center-align" id="lightgallery4">
+												<a ng-repeat="pic in budgetPics" href="{{pic}}">
+													<img class="hoverable z-depth-1 responsive-img" src="{{budgetThumbnails[$index]}}" />
+												</a>
 											</div>
 										</div>
 									</div>
@@ -162,12 +188,17 @@
 													</a>
 												</p>
 											</p>
-											<div class="slider hoverable">
+											<!-- <div class="slider hoverable">
 												<ul class="slides">
 													<li ng-repeat="pic in bankPics">
 														<img src="{{pic}}">
 													</li>
 												</ul>
+											</div> -->
+											<div class="gallery center-align" id="lightgallery5">
+												<a ng-repeat="pic in bankPics" href="{{pic}}">
+													<img class="hoverable z-depth-1 responsive-img" src="{{bankThumbnails[$index]}}" />
+												</a>
 											</div>
 										</div>
 									</div>
@@ -186,12 +217,17 @@
 													</a>
 												</p>
 											</p>
-											<div class="slider hoverable">
+											<!-- <div class="slider hoverable">
 												<ul class="slides">
 													<li ng-repeat="pic in personalWebPics">
 														<img src="{{pic}}">
 													</li>
 												</ul>
+											</div> -->
+											<div class="gallery center-align" id="lightgallery6">
+												<a ng-repeat="pic in personalWebPics" href="{{pic}}">
+													<img class="hoverable z-depth-1 responsive-img" src="{{personalWebThumbnails[$index]}}" />
+												</a>
 											</div>
 										</div>
 									</div>
@@ -209,6 +245,8 @@
 		<!-- Import jQuery before materialize.js -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
+    	<script type="text/javascript" src="js/lightgallery.min.js"></script>
+    	<script type="text/javascript" src="js/lg-thumbnail.min.js"></script>
 		<!-- AngularJS -->
 		<script type="text/javascript" src="https://code.angularjs.org/1.3.14/angular.min.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-animate.js"></script>
@@ -220,16 +258,14 @@
 		<script type="text/javascript" src="js/app/controllers/navigation.js"></script>
 
 		<script type="text/javascript">
-			//hide elements on load
-			$('main').hide();
-			$(document).ready(function() {
-				//elements fade in
-				$('main').delay(600).fadeIn('slow');
-			});
-
 			$(document).ready(function(){
-				//image box
-    			$('.materialboxed').materialbox();
+				//image gallery
+    			$("#lightgallery1").lightGallery({thumbnail: true});
+    			$("#lightgallery2").lightGallery({thumbnail: true});
+    			$("#lightgallery3").lightGallery({thumbnail: true});
+    			$("#lightgallery4").lightGallery({thumbnail: true});
+    			$("#lightgallery5").lightGallery({thumbnail: true});
+    			$("#lightgallery6").lightGallery({thumbnail: true});
 				//sliders
 				$('.slider').slider();
 				//scrollspy

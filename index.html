@@ -31,7 +31,7 @@
 								<div class="col l2 m4">
 									<img src="img/pic.png" alt="" class="circle responsive-img z-depth-1 hoverable">
 								</div>
-								
+
 								<div class="col l6 m8">
 									<p class="flow-text">
 										My name is Nick Mckloski. I'm a developer currently living in Tallahassee, Florida. At the moment, I work for the Florida Department of State while attending college. I use this website as a way to share information about my projects and hobbies. You can get in touch with me on social media below or use the "Contact" page.
@@ -49,7 +49,7 @@
 									</p>
 								</div>
 								<div class="col l4 m12">
-									<feed id="git" url="https://github.com/NickMckloski.atom" 
+									<feed id="git" url="https://github.com/NickMckloski.atom"
 									template-url="partials/feedtemplate.html" count="12" post-render="feedPostRender"></feed>
 								</div>
 							</div>
@@ -76,7 +76,7 @@
 		<script type="text/javascript" src="js/app/controllers/feed.js"></script>
 
 		<script type="text/javascript">
-			
+
 			function feedPostRender() {
 				//append links in git feed
 				$('#git').find('a').each(function (idx, anchor) {
@@ -84,13 +84,6 @@
 					anchor.href = anchor.href.replace(window.location.origin, 'https://github.com');
 				});
 			}
-			
-			//hide elements on load
-			$('main').hide();
-			$(document).ready(function() {
-				//elements fade in
-				$('main').delay(600).fadeIn('slow');
-			});
 		</script>
 	</body>
 </html>

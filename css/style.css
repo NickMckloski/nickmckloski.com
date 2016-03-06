@@ -66,6 +66,20 @@ main {
 	margin-top: 15px;
 }
 
+.slider .slides li img {
+	object-fit: fill !important;
+    background-repeat: no-repeat;
+}
+
+.gallery {
+	padding: 20px;
+}
+
+.gallery a img {
+	margin: 15px;
+	border: solid 2px gray;
+}
+
 .indicators {
 	padding-bottom: 10px;
 }
