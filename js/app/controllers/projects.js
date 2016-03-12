@@ -10,6 +10,20 @@ app.controller("projects", ['$scope', function($scope) {
 		$scope.trafficThumbnails.push($scope.trafficThumbnailUrl+i+".png");
 		$scope.trafficPics.push($scope.trafficBaseUrl+i+".png");
 	}
+	//recorder
+	$scope.recorderThumbnailUrl = "img/previews/thumbnails/recorder";
+	$scope.recorderBaseUrl = "img/previews/recorder";
+	$scope.recorderCount = 4;
+	$scope.recorderThumbnails = [];
+	$scope.recorderPics = [];
+
+	for(i = 1; i <= $scope.recorderCount; i++) {
+		$scope.recorderThumbnails.push($scope.recorderThumbnailUrl+i+".png");
+		if(i == 4)
+			$scope.recorderPics.push($scope.recorderBaseUrl+i+".gif");
+		else
+			$scope.recorderPics.push($scope.recorderBaseUrl+i+".png");
+	}
 	//gamestat
 	$scope.gameThumbnailUrl = "img/previews/thumbnails/gamestat";
 	$scope.gameBaseUrl = "img/previews/gamestat";

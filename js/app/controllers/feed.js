@@ -23,7 +23,7 @@ app.controller("feed", ['$scope', function($scope) {
 
 	//git show more
 	$scope.gitShowButton = "Show More";
-	$scope.gitShowAmount = 3;
+	$scope.gitShowAmount = 6;
 	$scope.show = function() {
 		if($scope.gitShowButton == "Show More") {
 			$scope.gitShowAmount += 3;
