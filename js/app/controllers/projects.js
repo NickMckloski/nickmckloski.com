@@ -10,6 +10,17 @@ app.controller("projects", ['$scope', function($scope) {
 		$scope.trafficThumbnails.push($scope.trafficThumbnailUrl+i+".png");
 		$scope.trafficPics.push($scope.trafficBaseUrl+i+".png");
 	}
+	//go
+	$scope.goThumbnailUrl = "img/previews/thumbnails/go";
+	$scope.goBaseUrl = "img/previews/go";
+	$scope.goCount = 3;
+	$scope.goThumbnails = [];
+	$scope.goPics = [];
+
+	for(i = 1; i <= $scope.goCount; i++) {
+		$scope.goThumbnails.push($scope.goThumbnailUrl+i+".png");
+		$scope.goPics.push($scope.goBaseUrl+i+".png");
+	}
 	//recorder
 	$scope.recorderThumbnailUrl = "img/previews/thumbnails/recorder";
 	$scope.recorderBaseUrl = "img/previews/recorder";

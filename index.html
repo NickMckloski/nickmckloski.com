@@ -59,18 +59,18 @@
 										<!-- showcase -->
 										<div ng-controller="projects" id="recorder" class="showcase section">
 											<div class="collapsible-header">
-												<h5 style="padding-top: 10px;">Project Showcase</h5>
+												<h5 style="padding-top: 10px;">Recent Project</h5>
 											</div>
-											<h5 class="showcase-title" style="font-size: 18px;">Java Gif Recorder</h5>
+											<h5 class="showcase-title" style="font-size: 18px;">Java Go App</h5>
 											<div class="project-content">
 												<p>
 													<b>Description:</b>
-													An application that records .gifs from a selected screen region.
+													A Java app where you can play the board game "Go".
 													<br/>
 													<b>Technologies used:</b> <i>Java</i>
 												</p>
 												<p class="social-buttons">
-														<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/java-recorder" target="_blank">
+														<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/Go-java-app" target="_blank">
 															<i class="material-icons left">code</i>View GitHub
 														</a>
 														<a class="waves-effect waves-light blue darken-1 btn" href="/projects.html">
@@ -78,8 +78,8 @@
 														</a>
 												</p>
 												<div class="gallery center-align" id="lightgallery">
-													<a ng-repeat="pic in recorderPics" href="{{pic}}">
-														<img class="hoverable z-depth-1 responsive-img" src="{{recorderThumbnails[$index]}}" />
+													<a ng-repeat="pic in goPics" href="{{pic}}">
+														<img class="hoverable z-depth-1 responsive-img" src="{{goThumbnails[$index]}}" />
 													</a>
 												</div>
 											</div>
