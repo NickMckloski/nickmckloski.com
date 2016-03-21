@@ -28,6 +28,7 @@
 						<li><a href="#apps" class="active">Applications/Software</a></li>
 						<div class="sub-items">
 							<li><a href="#traffic">Traffic Tools</a></li>
+							<li><a href="#go">Go App</a></li>
 							<li><a href="#recorder">Java Gif Recorder</a></li>
 							<li><a href="#gamestat">Game Statistics Tracker</a></li>
 							<li><a href="#rss">RSS Feed Reader</a></li>
@@ -78,6 +79,28 @@
 											</div>
 										</div>
 									</div>
+									<!-- go app -->
+									<div id="go" class="section scrollspy z-depth-1">
+										<h5 class="blue darken-1 white-text">Go App</h5>
+										<div class="project-content">
+											<p>
+												<b>Description:</b>
+												A Java app where you can play the board game "Go".
+												<br/>
+												<b>Technologies used:</b> <i>Java</i>
+											</p>
+											<p class="social-buttons">
+													<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/java-recorder" target="_blank">
+														<i class="material-icons left">code</i>View GitHub
+													</a>
+												</p>
+											<div class="gallery center-align" id="lightgallery2">
+												<a ng-repeat="pic in goPics" href="{{pic}}">
+													<img class="hoverable z-depth-1 responsive-img" src="{{goThumbnails[$index]}}" />
+												</a>
+											</div>
+										</div>
+									</div>
 									<!-- recorder -->
 									<div id="recorder" class="section scrollspy z-depth-1">
 										<h5 class="blue darken-1 white-text">Java Gif Recorder</h5>
@@ -93,7 +116,7 @@
 														<i class="material-icons left">code</i>View GitHub
 													</a>
 												</p>
-											<div class="gallery center-align" id="lightgallery2">
+											<div class="gallery center-align" id="lightgallery3">
 												<a ng-repeat="pic in recorderPics" href="{{pic}}">
 													<img class="hoverable z-depth-1 responsive-img" src="{{recorderThumbnails[$index]}}" />
 												</a>
@@ -122,7 +145,7 @@
 													</li>
 												</ul>
 											</div> -->
-											<div class="gallery center-align" id="lightgallery3">
+											<div class="gallery center-align" id="lightgallery4">
 												<a ng-repeat="pic in gameStatPics" href="{{pic}}">
 													<img class="hoverable z-depth-1 responsive-img" src="{{gameStatThumbnails[$index]}}" />
 												</a>
@@ -151,7 +174,7 @@
 													</li>
 												</ul>
 											</div> -->
-											<div class="gallery center-align" id="lightgallery4">
+											<div class="gallery center-align" id="lightgallery5">
 												<a ng-repeat="pic in rssPics" href="{{pic}}">
 													<img class="hoverable z-depth-1 responsive-img" src="{{rssThumbnails[$index]}}" />
 												</a>
@@ -180,7 +203,7 @@
 													</li>
 												</ul>
 											</div> -->
-											<div class="gallery center-align" id="lightgallery5">
+											<div class="gallery center-align" id="lightgallery6">
 												<a ng-repeat="pic in budgetPics" href="{{pic}}">
 													<img class="hoverable z-depth-1 responsive-img" src="{{budgetThumbnails[$index]}}" />
 												</a>
@@ -218,7 +241,7 @@
 													</li>
 												</ul>
 											</div> -->
-											<div class="gallery center-align" id="lightgallery6">
+											<div class="gallery center-align" id="lightgallery7">
 												<a ng-repeat="pic in bankPics" href="{{pic}}">
 													<img class="hoverable z-depth-1 responsive-img" src="{{bankThumbnails[$index]}}" />
 												</a>
@@ -247,7 +270,7 @@
 													</li>
 												</ul>
 											</div> -->
-											<div class="gallery center-align" id="lightgallery7">
+											<div class="gallery center-align" id="lightgallery8">
 												<a ng-repeat="pic in personalWebPics" href="{{pic}}">
 													<img class="hoverable z-depth-1 responsive-img" src="{{personalWebThumbnails[$index]}}" />
 												</a>
@@ -290,6 +313,7 @@
     			$("#lightgallery5").lightGallery({thumbnail: true});
     			$("#lightgallery6").lightGallery({thumbnail: true});
     			$("#lightgallery7").lightGallery({thumbnail: true});
+    			$("#lightgallery8").lightGallery({thumbnail: true});
 				//sliders
 				$('.slider').slider();
 				//scrollspy
