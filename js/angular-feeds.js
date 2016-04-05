@@ -2,7 +2,7 @@
 * angular-feeds - v0.0.4 - 2015-04-07 6:38 PM
 * https://github.com/siddii/angular-feeds
 *
-* Copyright (c) 2015 
+* Copyright (c) 2015
 * Licensed MIT <https://github.com/siddii/angular-feeds/blob/master/LICENSE.txt>
 */
 'use strict';
@@ -18,7 +18,7 @@ angular.module('feeds-directives', []).directive('feed', ['feedService', '$compi
 				if ($attrs.postRender && value) {
 					$timeout(function () {
 						new Function("element", $attrs.postRender + '(element);')($element);
-					}, 0);
+					}, 1000);
 				}
 			});
 
