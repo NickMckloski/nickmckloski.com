@@ -39,7 +39,7 @@
 
 										<div class="col l9 m8">
 											<p class="flow-text">
-												My name is Nick Mckloski. I'm a developer currently living in Tallahassee, Florida. At the moment, I work for the Florida Department of State while attending college. I use this website as a way to share information about my projects and hobbies. You can get in touch with me on social media below or use the "Contact" page.
+												My name is Nick Mckloski. I'm a developer currently living in Tallahassee, Florida. At the moment, I work for the FDLE while attending college. I use this website as a way to share information about my projects and hobbies. You can get in touch with me on social media below or use the "Contact" page.
 											</p>
 											<p class="social-buttons">
 												<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski" target="_blank">
@@ -58,31 +58,29 @@
 
 									<div class="row">
 										<!-- showcase -->
-										<div ng-controller="projects" id="recorder" class="showcase section">
+										<div class="showcase section">
 											<div class="collapsible-header">
 												<h5 style="padding-top: 10px;">Recent Project</h5>
 											</div>
-											<h5 class="showcase-title" style="font-size: 18px;">Java Go App</h5>
+											<h5 class="showcase-title" style="font-size: 18px;">Algorithm Visualizations</h5>
 											<div class="project-content">
 												<p>
 													<b>Description:</b>
-													A Java app where you can play the board game "Go".
+													A small visualization of a few sorting algorithms.
 													<br/>
-													<b>Technologies used:</b> <i>Java</i>
+													<b>Technologies used:</b> <i>Javascript, AngularJS</i>
 												</p>
 												<p class="social-buttons">
-														<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/Go-java-app" target="_blank">
+														<a class="waves-effect waves-light blue darken-1 btn" href="https://github.com/NickMckloski/algorithm-visuals" target="_blank">
 															<i class="material-icons left">code</i>View GitHub
 														</a>
 														<a class="waves-effect waves-light blue darken-1 btn" href="/projects.html">
 															<i class="material-icons left">open_in_new</i>All Projects
 														</a>
 												</p>
-												<div class="gallery center-align" id="lightgallery">
-													<a ng-repeat="pic in goPics" href="{{pic}}">
-														<img class="hoverable z-depth-1 responsive-img" src="{{goThumbnails[$index]}}" />
-													</a>
-												</div>
+												<!-- <div class="video-container"> -->
+													<iframe width="520" height="480" src="/algorithm-visuals-app/" frameborder="0" allowfullscreen></iframe>
+												<!-- </div> -->
 											</div>
 										</div>
 									</div>
