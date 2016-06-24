@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" ng-controller="contact">
 	<head>
+		<title>{{title}}</title>
+
 		<!--Import Google Icon Font-->
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -19,7 +21,7 @@
 	<!--Contact form is not complete. I still have not decided on a server side tech to handle the email processing.-->
 
 
-	<body ng-controller="contact">
+	<body>
 
 		<header ng-include src="'partials/header.html'" onload="name = 'Contact'">
 		</header>

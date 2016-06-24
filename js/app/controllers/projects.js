@@ -1,4 +1,5 @@
 app.controller("projects", ['$scope', function($scope) {
+	$scope.title = 'Projects - NickMckloski.com';
 	//traffic
 	$scope.trafficThumbnailUrl = "img/previews/thumbnails/traffictools";
 	$scope.trafficBaseUrl = "img/previews/traffictools";

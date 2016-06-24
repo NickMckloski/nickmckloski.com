@@ -1,5 +1,6 @@
 app.controller("contact", ['$scope', function($scope) {
 	//contact
+	$scope.title = 'Contact - NickMckloski.com';
 	$scope.formData = {};
 	$scope.formProcessed = false;
 	$scope.formSuccess = false;
