@@ -203,3 +203,16 @@ form {
 	width: 100%;
 	height: 480px;
 }
+
+/*github activity overrides*/
+.gha-header {
+	width: calc(100% - 2px) !important;
+}
+.gha-github-icon {
+	padding: 0 !important;
+}
+.gha-footer {
+	width: calc(100% - 2px) !important;
+	bottom: 1px !important;
+	height: 27px !important;
+}
